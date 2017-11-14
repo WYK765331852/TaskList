@@ -1,32 +1,32 @@
 package com.example.wyk.mylist;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.support.v4.app.Fragment;
+import android.widget.Toolbar;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Created by chen on 2017/11/13.
+ * Created by chen on 2017/11/14.
  */
 
-public class JavaClass extends AppCompatActivity {
+
+@SuppressLint("ValidFragment")
+public class JavaClass extends Fragment {
+    private List<Fragment> fragmentList = new ArrayList<>();
+    private String[] tabTitle = {"WiFi认证", "账户", "监控"};
+    private Context mContext;
     private Toolbar mToolbar;
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
-        mToolbar=findViewById(R.id.main_toolbar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        mToolbar.setTitle("TaskList");
+    private final int type = 1;
 
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+    public JavaClass(Context context) {
+        this.mContext = context;
+        int text = 2;
+        if (text == type){
 
-            }
-        });
-        setTitle("TaskList");
+        }
     }
+
 }
