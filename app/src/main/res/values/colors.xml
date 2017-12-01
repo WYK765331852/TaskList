@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0ac3d5 </color>
-    <color name="colorPrimaryDark">#0ac3d5 </color>
-    <color name="colorAccent">#0ac3d5 </color>
+    <color name="colorPrimary">#4B5A7A </color>
+    <color name="colorPrimaryDark">#4B5A7A </color>
+    <color name="colorAccent">#4B5A7A </color>
     <color name="list_hint">#fb7c62 </color>
+    <color name="list_blue">#0ac3d5</color>
+    <color name="list_yellow">#fed22c </color>
+    <color name="list_light_blue">#C0CCF7</color>
+    <color name="list_word_hint">#ACB5D5</color>
+    <color name="list_unselected">#D0D3DF</color>
+    <color name="list_dark_blue">#4B5A7A</color>
+    <color name="list_black">#000000</color>
     <color name="list_white">#ffffff</color>
+    <color name="list_darker_blue">#314161</color>
+    <color name="list_main_word">#7C879F</color>
+    <color name="list_main_hint">#818CA2</color>
+    <color name="list_main_float">#7BA4F9</color>
+
+
+
 
 </resources>

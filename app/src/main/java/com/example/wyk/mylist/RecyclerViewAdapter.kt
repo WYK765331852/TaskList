@@ -17,20 +17,24 @@ class RecyclerViewAdapter(var mContext: Context) : RecyclerView.Adapter<Recycler
     private var mTaskList: List<ListBean>? = null
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//        TODO("not implemented")
+        //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//        TODO("not implemented")
+        //To change body of created functions use File | Settings | File Templates.
         if (viewType == NORMAL_TYPE){
-            var v:View = LayoutInflater.from(parent!!.context).inflate(R.layout.list_fragment_recyclerview, parent, false)
+            var v:View = LayoutInflater.from(parent!!.context).inflate(R.layout.list_item_list, parent, false)
             var normalHolder: NormalHolder = NormalHolder(v)
             return normalHolder
         }
+        return NormalHolder(LayoutInflater.from(parent!!.context).inflate(R.layout.list_item_list, parent, false))
     }
 
     override fun getItemCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//        TODO("not implemented")
+        //To change body of created functions use File | Settings | File Templates.
         return mTaskList!!.size
     }
 
@@ -45,8 +49,8 @@ class RecyclerViewAdapter(var mContext: Context) : RecyclerView.Adapter<Recycler
 
         init {
             title = itemView!!.findViewById(R.id.list_main_cv_title)
-            score = itemView!!.findViewById(R.id.list_main_cv_score)
-            icon = itemView!!.findViewById(R.id.list_main_cv_iv)
+            score = itemView.findViewById(R.id.list_main_cv_score)
+            icon = itemView.findViewById(R.id.list_main_cv_iv)
         }
     }
 }

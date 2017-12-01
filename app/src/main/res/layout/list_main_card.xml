@@ -9,8 +9,8 @@
         android:id="@+id/list_main_cv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="4dp"
         app:cardElevation="6dp"
         app:cardCornerRadius="4dp"
@@ -20,37 +20,58 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="14dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-            <ImageView
-                android:id="@+id/list_main_cv_iv"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/card_icon_1"
-                />
-            <TextView
-                android:id="@+id/list_main_cv_title"
-                android:layout_width="wrap_content"
+
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:textSize="14sp"
-                tools:text="taskList"
-                />
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/list_main_cv_iv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/card_icon_1"
+                    />
                 <TextView
-                    android:id="@+id/list_main_cv_score"
+                    android:id="@+id/list_main_cv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginRight="18dp"
-                    tools:text="30"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="14sp"
+                    tools:text="taskList"
+                    android:textColor="@color/list_main_word"
                     />
-            </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/list_main_cv_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="18dp"
+                        android:textColor="@color/list_main_word"
+                        tools:text="16:30"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/list_main_cv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="46dp"
+                android:textSize="12sp"
+                android:textColor="@color/list_main_hint"
+                tools:text="textview"/>
 
         </LinearLayout>
+
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

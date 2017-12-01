@@ -1,42 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:fab="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <android.support.v7.widget.Toolbar
-            android:id="@+id/main_toolbar"
-            android:layout_width="wrap_content"
+            android:id="@+id/list_main_toolbar"
+            android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways">
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+
         </android.support.v7.widget.Toolbar>
+
         <android.support.design.widget.TabLayout
             android:id="@+id/list_main_tab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabGravity="fill"
-            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/list_darker_blue"
             app:tabIndicatorHeight="3dp"
-            app:tabIndicatorColor="@color/list_hint"
-            app:tabTextColor="@color/list_white"
-            app:tabSelectedTextColor="@color/list_hint"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/list_white"
+            app:tabTextColor="@color/list_unselected"
             >
 
         </android.support.design.widget.TabLayout>
     </android.support.design.widget.AppBarLayout>
-    <LinearLayout
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/list_main_vp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <android.support.v4.view.ViewPager
-            android:id="@+id/list_main_vp"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:scrollbars="none">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        </android.support.v4.view.ViewPager>
-    </LinearLayout>
+    </android.support.v4.view.ViewPager>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/list_main_floatbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/menu_plus"
+            app:backgroundTint="@color/list_main_float"
+            app:fab_colorNormal="@color/list_main_float"
+            app:fab_colorPressed="@color/list_main_float"
+            app:fab_colorRipple="@color/list_main_float"
+            app:fab_type="mini"
+            />
+    </RelativeLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
